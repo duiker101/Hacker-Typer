@@ -1,0 +1,30 @@
+body{
+	background:#000000;
+	color:#00FF00;
+	font-family:monospace;
+}
+
+.accessGranted{
+	position:absolute;
+	top:200px;
+	background:#333;
+	padding:20px;
+	border:1px solid #999;
+	width:300px;
+	left:50%;
+	margin-left:-150px;
+	text-align:center;
+}
+
+.accessDenied{
+	position:absolute;
+	top:200px;
+	color:#F00;
+	background:#511;
+	padding:20px;
+	border:1px solid #F00;
+	width:300px;
+	left:50%;
+	margin-left:-150px;
+	text-align:center;
+}
