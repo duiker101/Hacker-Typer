@@ -260,7 +260,7 @@ int groups_search(const struct group_info *group_info, gid_t grp)
 
 	while (left < right) {
 
-		unsigned int mid = (left+right)/2;
+		unsigned int mid = left + (right - left)/2;
 
 		if (grp > GROUP_AT(group_info, mid))
 
