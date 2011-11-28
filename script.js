@@ -8,6 +8,7 @@ $(
 		$( document ).keydown(
 			function ( event ) { 
 				Typer.addText( event ); //Capture the keydown event and call the addText, this is executed on page load
+				$('#console').each(function(i, e) {hljs.highlightBlock(e, '    ', true)});
 			}
 		);
 	}
