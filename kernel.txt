@@ -1,4 +1,63 @@
-struct group_info init_groups = { .usage = ATOMIC_INIT(2) };
+Boot:       100% Done;
+Logging In: 13%
+Logging In: 56%
+Logging In: 86%
+Logging In: 93%
+Logging In  100% Done;
+Done 
+Welcome
+Searching Targets...
+Done
+Changing ip address from 86.45.96 to 00.00.00
+Changing mac address from 74:ea:3a:dd:15:d4 to 00:00:00:11:88:99
+Changing gateway ip address from 192.168.1.1 to 000.000.0.0
+Done Your System is now ready for Hacking
+Task Trace Satallite fireP-88 
+Tracing....................
+Done 
+Satallite Found
+ Latitude = 61.1145, Longitude = 170.5078
+Lat    = 61 degrees,   6.9 minutes   North
+Long = 170 degrees,   30.5 minutes   East
+Task Logg in 
+wating for logging in
+logging in
+
+Satallite fireP-88
+Username:
+Paswword:
+
+Task Crack Pass/hac Pass
+Wait.......
+Wait.......
+Wait.......
+Wait.......
+Wait.......
+Wait.......
+Wait.......
+Wait.......
+Wait.......
+Wait.......
+Wait.......
+
+Satallite fireP-88
+Username Password Found 
+Username:efg5599b11
+Password:sunrise88p3
+
+Task Logg In
+Wating for Logging In
+Logging In
+
+Satallite fireP-88
+Username:efg5599b11
+Paswword:sunrise88p3
+
+Worng Pass or username
+ Hacking and decoding into Satallite User name and Pass
+
+
+
 
 struct group_info *groups_alloc(int gidsetsize){
 
@@ -529,3 +588,6 @@ int in_egroup_p(gid_t grp)
 	return retval;
 
 }
+
+Done Username and Pass Found
+
