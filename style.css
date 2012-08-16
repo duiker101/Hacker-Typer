@@ -1,31 +1,31 @@
-body{
-	background:#000000;
-	color:#00FF00;
-	font-family:monospace;
+body {
+	background: #000000;
+	color: #00FF00;
+	font-family: monospace;
 	overflow: hidden;
 }
 
-.accessGranted{
+.accessGranted {
 	position: fixed;
-	top:200px;
+	top: 200px;
 	background-color: #151;
-	padding:20px;
+	padding: 20px;
 	border: 1px solid #0F0;
-	width:300px;
-	left:50%;
-	margin-left:-150px;
-	text-align:center;
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;
+	text-align: center;
 }
 
-.accessDenied{
+.accessDenied {
 	position: fixed;
-	top:200px;
-	color:#F00;
+	top: 200px;
+	color: #F00;
 	background-color: #511;
-	padding:20px;
-	border:1px solid #F00;
-	width:300px;
-	left:50%;
-	margin-left:-150px;
-	text-align:center;
+	padding: 20px;
+	border: 1px solid #F00;
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;
+	text-align: center;
 }

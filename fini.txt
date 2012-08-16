@@ -1,0 +1,83 @@
+declare -a files_restrict_
+function mak:restrict_() {
+    if [[ -z ${files_restrict_[$1]+@} ]]; then
+        files_restrict_[$1]=''
+
+        declare require
+        IFS=$' \t\n'
+        for require in ${files_requires_[$1]}; do
+            mak:restrict_ "$require"
+        done
+    fi
+}
+
+function mak:be:class_() {
+    declare i="$1"
+    shift
+
+    if [[ $# -ne 0 ]]; then
+        declare file
+        IFS=$' \t\n'
+        for file in ${classes_files_[i]}; do
+            mak:requires_ "$file" "$@"
+        done
+    fi
+}
+
+function mak:class_() {
+    declare i
+    for i in "${!classes_ext_[@]}"; do
+        mak:filter "${classes_ext_[i]}" -- mak:be:class_ "$i"
+    done
+
+    return 0
+}
+
+#profile "%class%" \
+mak:class_
+
+function mak:debug-restrict_() {
+    echo "${!files_restrict_[*]}"
+}
+
+if [[ $# -ne 0 ]]; then
+    declare target
+    for target in "$@"; do
+        declare i
+        for i in "${!files_name_[@]}"; do
+            declare path="${files_root_[i]}${files_name_[i]}"
+            if [[ ${path##*(./)} == $target ]]; then
+                mak:restrict_ "$i"
+                declare target=''
+            fi
+        done
+
+        if [[ ${target:+@} ]]; then
+            fatal "unknown target: $target"
+        fi
+    done
+
+    declare i
+    for i in "${!files_requires_[@]}"; do
+        if [[ -z ${files_restrict_[i]+@} ]]; then
+            unset 'files_requires_[i]'
+        fi
+    done
+
+    declare i
+    for i in "${!files_queue_[@]}"; do
+        if [[ -z ${files_restrict_[i]+@} ]]; then
+            mak:dequeue_ "$i"
+        fi
+    done
+fi
+
+if [[ ${OPT_DEBUG+@} ]]; then
+    "mak:debug-${OPT_DEBUG}_"
+    exit 0
+fi
+
+#profile "%schedule%" \
+mak:schedule
+
+rekill_
