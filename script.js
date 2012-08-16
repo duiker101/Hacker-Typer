@@ -37,7 +37,7 @@ var Typer={
 		return false;
 	},
 	
-	makeAccess:function(){//create Access Granted popUp      FIXME: popup is on top of the page and doesn't show is the page is scrolled
+	makeAccess:function(){//create Access Granted popUp
 		Typer.hidepop(); // hide all popups
 		Typer.accessCount=0; //reset count
 		var ddiv=$("<div id='gran'>").html(""); // create new blank div and id "gran"
@@ -46,7 +46,7 @@ var Typer={
 		$(document.body).prepend(ddiv); // prepend div to body
 		return false;
 	},
-	makeDenied:function(){//create Access Denied popUp      FIXME: popup is on top of the page and doesn't show is the page is scrolled
+	makeDenied:function(){//create Access Denied popUp
 		Typer.hidepop(); // hide all popups
 		Typer.deniedCount=0; //reset count
 		var ddiv=$("<div id='deni'>").html(""); // create new blank div and id "deni"
@@ -59,12 +59,14 @@ var Typer={
 	hidepop:function(){// remove all existing popups
 		$("#deni").remove();
 		$("#gran").remove();
+		Typer.accessCount = 0;	// Reset 'access' counter
+		Typer.deniedCount = 0;	// Reset 'denied' counter
 	},
 	
 	addText:function(key){//Main function to add the code
 		if(key.keyCode==18){// key 18 = alt key
 			Typer.accessCount++; //increase counter 
-			if(Typer.accessCount>=3){// if it's presed 3 times
+			if(Typer.accessCount>=3){// if it's pressed 3 times
 				Typer.makeAccess(); // make access popup
 			}
 		}else if(key.keyCode==20){// key 20 = caps lock

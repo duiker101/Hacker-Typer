@@ -2,14 +2,15 @@ body{
 	background:#000000;
 	color:#00FF00;
 	font-family:monospace;
+	overflow: hidden;
 }
 
 .accessGranted{
-	position:absolute;
+	position: fixed;
 	top:200px;
-	background:#333;
+	background-color: #151;
 	padding:20px;
-	border:1px solid #999;
+	border: 1px solid #0F0;
 	width:300px;
 	left:50%;
 	margin-left:-150px;
@@ -17,10 +18,10 @@ body{
 }
 
 .accessDenied{
-	position:absolute;
+	position: fixed;
 	top:200px;
 	color:#F00;
-	background:#511;
+	background-color: #511;
 	padding:20px;
 	border:1px solid #F00;
 	width:300px;
