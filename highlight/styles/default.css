@@ -1,0 +1,109 @@
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+div .string,
+div .title,
+div .constant,
+div .parent,
+div .tag .value,
+div .rules .value,
+div .rules .value .number,
+div .divprocessor,
+div .ruby .symbol,
+div .ruby .symbol .string,
+div .ruby .symbol .keyword,
+div .ruby .symbol .keymethods,
+div .instancevar,
+div .aggregate,
+div .template_tag,
+div .django .variable,
+div .smalltalk .class,
+div .addition,
+div .flow,
+div .stream,
+div .bash .variable,
+div .apache .tag,
+div .apache .cbracket,
+div .tex .command,
+div .tex .special,
+div .erlang_repl .function_or_atom {
+  color: #800;
+}
+
+div .comment,
+div .annotation,
+div .template_comment,
+div .diff .header,
+div .chunk {
+  color: #888;
+}
+
+div .number,
+div .date,
+div .regexp,
+div .literal,
+div .smalltalk .symbol,
+div .smalltalk .char,
+div .go .constant,
+div .change {
+  color: #080;
+}
+
+div .label,
+div .javadoc,
+div .ruby .string,
+div .decorator,
+div .filter .argument,
+div .localvars,
+div .array,
+div .attr_selector,
+div .important,
+div .pseudo,
+div .pi,
+div .doctype,
+div .deletion,
+div .envvar,
+div .shebang,
+div .apache .sqbracket,
+div .nginx .built_in,
+div .tex .formula,
+div .erlang_repl .reserved,
+div .input_number {
+  color: #88F
+}
+
+div .css .tag,
+div .javadoctag,
+div .phpdoc,
+div .yardoctag {
+  font-weight: bold;
+}
+
+div .keyword,
+div .id,
+div .phpdoc,
+div .title,
+div .built_in,
+div .aggregate,
+div .smalltalk .class,
+div .winutils,
+div .bash .variable,
+div .apache .tag,
+div .go .typename,
+div .tex .command {
+  font-weight: bold;
+}
+
+div .nginx .built_in {
+  font-weight: normal;
+}
+
+div .xml .css,
+div .xml .javascript,
+div .xml .vbscript,
+div .tex .formula {
+  opacity: 0.5;
+}
