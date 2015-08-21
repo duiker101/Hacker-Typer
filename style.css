@@ -28,3 +28,5 @@ body{
 	margin-left:-150px;
 	text-align:center;
 }
+
+HTML{ overflow-y: hidden; }
