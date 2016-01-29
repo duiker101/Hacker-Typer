@@ -37,7 +37,7 @@ var Typer={
 		return false;
 	},
 	
-	makeAccess:function(){//create Access Granted popUp      FIXME: popup is on top of the page and doesn't show is the page is scrolled
+	makeAccess:function(){//create Access Granted popUp      
 		Typer.hidepop(); // hide all popups
 		Typer.accessCount=0; //reset count
 		var ddiv=$("<div id='gran'>").html(""); // create new blank div and id "gran"
@@ -46,7 +46,7 @@ var Typer={
 		$(document.body).prepend(ddiv); // prepend div to body
 		return false;
 	},
-	makeDenied:function(){//create Access Denied popUp      FIXME: popup is on top of the page and doesn't show is the page is scrolled
+	makeDenied:function(){//create Access Denied popUp      
 		Typer.hidepop(); // hide all popups
 		Typer.deniedCount=0; //reset count
 		var ddiv=$("<div id='deni'>").html(""); // create new blank div and id "deni"
