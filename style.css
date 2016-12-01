@@ -5,7 +5,7 @@ body{
 }
 
 .accessGranted{
-	position:absolute;
+	position:fixed;
 	top:200px;
 	background:#333;
 	padding:20px;
@@ -17,7 +17,7 @@ body{
 }
 
 .accessDenied{
-	position:absolute;
+	position:fixed;
 	top:200px;
 	color:#F00;
 	background:#511;
