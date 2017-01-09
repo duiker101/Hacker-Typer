@@ -4,27 +4,22 @@ body{
 	font-family:monospace;
 }
 
-.accessGranted{
-	position:absolute;
+.popup{
+	position:fixed;
 	top:200px;
-	background:#333;
 	padding:20px;
-	border:1px solid #999;
 	width:300px;
 	left:50%;
 	margin-left:-150px;
 	text-align:center;
 }
+.accessGranted{
+	background:#333;
+	border:1px solid #999;
+}
 
 .accessDenied{
-	position:absolute;
-	top:200px;
-	color:#F00;
 	background:#511;
-	padding:20px;
 	border:1px solid #F00;
-	width:300px;
-	left:50%;
-	margin-left:-150px;
-	text-align:center;
+	color:#F00;
 }
