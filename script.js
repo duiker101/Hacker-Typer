@@ -41,7 +41,7 @@ var Typer={
 		Typer.hidepop(); // hide all popups
 		Typer.accessCount=0; //reset count
 		var ddiv=$("<div id='gran'>").html(""); // create new blank div and id "gran"
-		ddiv.addClass("accessGranted"); // add class to the div
+		ddiv.addClass("popup").addClass("accessGranted"); // add class to the div
 		ddiv.html("<h1>ACCESS GRANTED</h1>"); // set content of div
 		$(document.body).prepend(ddiv); // prepend div to body
 		return false;
@@ -50,7 +50,7 @@ var Typer={
 		Typer.hidepop(); // hide all popups
 		Typer.deniedCount=0; //reset count
 		var ddiv=$("<div id='deni'>").html(""); // create new blank div and id "deni"
-		ddiv.addClass("accessDenied");// add class to the div
+		ddiv.addClass("popup").addClass("accessDenied");// add class to the div
 		ddiv.html("<h1>ACCESS DENIED</h1>");// set content of div
 		$(document.body).prepend(ddiv);// prepend div to body
 		return false;
