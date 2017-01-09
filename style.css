@@ -5,7 +5,7 @@ body{
 }
 
 .popup{
-	position:absolute;
+	position:fixed;
 	top:200px;
 	padding:20px;
 	width:300px;
