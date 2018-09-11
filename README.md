@@ -1,4 +1,8 @@
-h2. License 
+## HackerTyper
+
+hackertyper.net is the original HackerTyper that was created back in 2011 as a fun little project. 
+
+## License 
 
 (c) Copyright 2011 Simone Masiero. Some Rights Reserved. 
 
