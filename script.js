@@ -64,7 +64,6 @@ var Typer={
 	},
 	
 	addText:function(key){//Main function to add the code
-		console.log(key.key);
 		if(key.key==='Alt'){// key 18 = alt key
 			Typer.accessCount++; //increase counter 
 			if(Typer.accessCount>=3){// if it's presed 3 times
