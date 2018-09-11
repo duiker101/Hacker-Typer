@@ -59,6 +59,8 @@ var Typer={
 	hidepop:function(){// remove all existing popups
 		$("#deni").remove();
 		$("#gran").remove();
+        Typer.accessCount=0; //reset access granted count
+        Typer.deniedCount=0; //reset access denied count
 	},
 	
 	addText:function(key){//Main function to add the code
