@@ -1,0 +1,62 @@
+.screenReaderOnly {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.chatPreview {
+  all: unset;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: -14px;
+  border-radius: 0.5px;
+  width: 250px;
+  padding: 10px 10px 10px 15px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  text-align: justify;
+  user-select: none; }
+  .chatPreview.isActive {
+    opacity: 1; }
+  .chatPreview .sessionName {
+    all: unset;
+    line-height: normal;
+    display: block;
+    color: #575659;
+    opacity: 0.5;
+    font-size: 12px;
+    font-family: helvetica, arial, sans-serif; }
+  .chatPreview .message {
+    all: unset;
+    line-height: normal;
+    display: block;
+    color: #575659;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 200px;
+    font-family: helvetica, arial, sans-serif; }
+
+.extendLeft {
+  right: -87px; }
+  .extendLeft.isActive {
+    right: -57px; }
+  .extendLeft .sessionName {
+    margin: 6px 0 0 0; }
+  .extendLeft .message {
+    margin: 6px 0; }
+
+.extendRight {
+  left: -38px; }
+  .extendRight.isActive {
+    left: -8px; }
+  .extendRight .sessionName {
+    margin: 6px 0 0 55px; }
+  .extendRight .message {
+    margin: 6px 0 5px 55px; }

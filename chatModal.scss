@@ -1,0 +1,123 @@
+.screenReaderOnly {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.chatWrapper {
+  all: unset;
+  z-index: 2147483647 !important;
+  position: fixed;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition-delay: 0.5s;
+  transition-property: height, width; }
+
+.chatWrapperShow {
+  transition-delay: 0s;
+  height: 100%;
+  width: 100%; }
+
+.chatBackground {
+  all: unset;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.35s;
+  transition-property: opacity; }
+
+.chatBackgroundShow {
+  opacity: 1; }
+
+.chatModal {
+  all: unset;
+  position: absolute;
+  background-color: white;
+  z-index: 101;
+  padding: 40px 40px 20px;
+  width: 460px;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.28);
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -70%);
+  transition-delay: 0.05s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.35s;
+  transition-property: opacity, transform; }
+
+.chatModalShow {
+  transform: translate(-50%, -50%);
+  opacity: 1; }
+
+.chatTitle {
+  all: unset;
+  display: block;
+  height: 33px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #575659;
+  margin: 0;
+  padding-bottom: 14px;
+  text-align: left;
+  line-height: normal; }
+
+.chatText {
+  all: unset;
+  display: block;
+  font-size: 14px;
+  font-family: helvetica, arial, sans-serif;
+  color: #575659;
+  margin: 0;
+  padding-bottom: 40px;
+  text-align: left;
+  line-height: normal; }
+
+.buttonWrapper {
+  all: unset;
+  display: block;
+  text-align: right;
+  color: white; }
+
+.button {
+  all: initial;
+  background-color: #0097cf;
+  color: #fff;
+  align-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  font-size: 14px;
+  line-height: 40px;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding: 0 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 400; }
+  .button:active {
+    background-color: #03bbff; }
+  .button:focus {
+    outline: 5px auto #0097cf; }
