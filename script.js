@@ -94,7 +94,7 @@ var Typer={
       console.html(text.replace(rtn,"<br/>").replace(rtt,"&nbsp;&nbsp;&nbsp;&nbsp;").replace(rts,"&nbsp;"));// replace newline chars with br, tabs with 4 space and blanks with an html blank
 			window.scrollBy(0,50); // scroll to make sure bottom is always visible
 		}
-    var isNotFnKey = !isFunctionKey(key.key);
+		var isNotFnKey = !key.key.match(/^F\d[0-2]?$/m);
 		if ( key.preventDefault && isNotFnKey ) { // prevent the function keys from being blocked
 			key.preventDefault()
 		}
@@ -111,19 +111,4 @@ var Typer={
 		else
 			this.write("|"); // else write it
 	}
-}
-
-// Determine if a key is a function key (F1, F2, etc.)
-function isFunctionKey(key) {
-  if (key.length <= 1)
-    return false;
-  if (key[0] === 'F')
-    return false;
-
-  for (var i = 1; i < key.length; i++) {
-    if (key[i] < '0' || key[i] > '9')
-      return false;
-  }
-
-  return true;
 }
