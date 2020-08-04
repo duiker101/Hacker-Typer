@@ -94,10 +94,11 @@ var Typer={
       console.html(text.replace(rtn,"<br/>").replace(rtt,"&nbsp;&nbsp;&nbsp;&nbsp;").replace(rts,"&nbsp;"));// replace newline chars with br, tabs with 4 space and blanks with an html blank
 			window.scrollBy(0,50); // scroll to make sure bottom is always visible
 		}
-		if ( key.preventDefault && key.key !== 'F11' ) { // prevent F11(fullscreen) from being blocked
+		var isNotFnKey = !key.key.match(/^F\d[0-2]?$/m);
+		if ( key.preventDefault && isNotFnKey ) { // prevent the function keys from being blocked
 			key.preventDefault()
 		}
-		if(key.key !== 'F11'){ // otherwise prevent keys default behavior
+		if(isNotFnKey){ // otherwise prevent keys default behavior
 			key.returnValue = false;
 		}
 	},
